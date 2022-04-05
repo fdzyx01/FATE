@@ -16,9 +16,11 @@
 
 import json
 import os
+import time 
 
 from cachetools import LRUCache, cached
 from ruamel import yaml
+from werkzeug.utils import secure_filename
 
 PROJECT_BASE = os.getenv("FATE_PROJECT_BASE") or os.getenv("FATE_DEPLOY_BASE")
 FATE_BASE = os.getenv("FATE_BASE")
@@ -135,3 +137,13 @@ def rewrite_json_file(filepath, json_data):
     with open(filepath, "w") as f:
         json.dump(json_data, f, indent=4, separators=(",", ": "))
     f.close()
+
+
+# -self
+def rename_file(prefix, filename):
+    filename = secure_filename(filename)
+    ext = filename.rsplit('.', 1)[1]
+    unix_time = int(time.time())
+    filename = prefix + str(unix_time) + '.' + ext
+    return filename
+
