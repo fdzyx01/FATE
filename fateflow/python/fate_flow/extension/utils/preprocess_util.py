@@ -18,7 +18,7 @@ import pandas as pd
 
 @DB.connection_context()
 def select_data_list(data_type):
-    jobs = Job.select(Job.f_job_id, Job.f_create_date, Job.f_create_time,Job.f_runtime_conf, Job.f_initiator_role, Job.f_status, Job.f_work_mode).where(Job.f_initiator_role == 'local', Job.f_status == 'success').order_by(Job.f_create_time.desc())
+    jobs = Job.select(Job.f_job_id, Job.f_create_date, Job.f_create_time,Job.f_runtime_conf, Job.f_initiator_role, Job.f_status).where(Job.f_initiator_role == 'local', Job.f_status == 'success').order_by(Job.f_create_time.desc())
     data_list = []
     for job in jobs:
         data_info = job.f_runtime_conf["component_parameters"]["role"]["local"]["0"]["upload_0"]
