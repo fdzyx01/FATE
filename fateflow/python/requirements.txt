@@ -21,9 +21,12 @@ numpy>=1.18.4, <1.19.0
 peewee==3.9.3
 psutil>=5.7.0
 pycryptodomex==3.6.6
+pydotplus==2.0.2
+PyJWT==2.3.0
 PyMySQL==0.9.3
 pyspark==3.1.2
 python-dotenv==0.13.0
+matplotlib==3.3.4
 redis==3.5.3
 urllib3==1.26.5
 requests<2.26.0
@@ -36,6 +39,7 @@ torch==1.4.0
 torch-model-archiver==0.3.1
 torchvision==0.5.0
 Werkzeug==0.15.3
+WTForms==3.0.0
 coverage==4.5.2
 pika==1.1.0
 pandas==1.1.5
