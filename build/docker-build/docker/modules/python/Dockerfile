@@ -35,4 +35,6 @@ ENV PYTHONPATH=$PYTHONPATH:/data/projects/fate/:/data/projects/fate/eggroll/pyth
 ENV EGGROLL_HOME=/data/projects/fate/eggroll
 ENV FATE_PROJECT_BASE=/data/projects/fate
 
+RUN yum install graphviz graphviz-doc -y
+
 CMD ["/bin/bash", "-c", "sleep 5 && python fateflow/python/fate_flow/fate_flow_server.py"]
