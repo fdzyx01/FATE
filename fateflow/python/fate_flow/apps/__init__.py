@@ -43,7 +43,7 @@ app.json_encoder = CustomJSONEncoder
 
 pages_dir = [
     Path(__file__).parent,
-    Path(__file__).parent.parent / 'scheduling_apps'
+    Path(__file__).parent.parent / 'scheduling_apps',
     Path(__file__).parent.parent / 'extension' / 'app'
 ]
 pages_path = [j for i in pages_dir for j in i.glob('*_app.py')]
