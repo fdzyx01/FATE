@@ -171,17 +171,22 @@ def grpc_status(service_id):
     job_id = info["job_id"]
     response_host = deploy_utils.grpc_deploy_command(job_id=job_id, method="POST", job_info=info,
                                                      json_body=config_data, endpoint='/predict_data/find_status')
-
-    if response_host["retcode"] == 0:
-        config_data = {"status": "1", "service_id": service_id}
-        response = federated_api(job_id=job_id,
-                                 method="POST",
-                                 endpoint='/deploy/grpc/update_status',
-                                 src_party_id=info["initiator"]["party_id"],
-                                 dest_party_id=info["role"]["guest"][0],
-                                 src_role=info["initiator"]["role"],
-                                 json_body=config_data,
-                                 federated_mode="MULTIPLE")
+    flag = True
+    for r in response_host["host"]:
+        if int(response_host["host"][r]["retcode"]) != 0 or int(response_host["host"][r]["status"]) != 0 :
+            flag = False
+            break
+    if flag:
+        if int(response_host["retcode"]) == 0:
+            config_data = {"status": "1", "service_id": service_id}
+            response = federated_api(job_id=job_id,
+                                     method="POST",
+                                     endpoint='/deploy/grpc/update_status',
+                                     src_party_id=info["initiator"]["party_id"],
+                                     dest_party_id=info["role"]["guest"][0],
+                                     src_role=info["initiator"]["role"],
+                                     json_body=config_data,
+                                     federated_mode="MULTIPLE")
 
 @manager.route('/predict/condition_list', methods=['POST'])
 def query_predict_file():
