@@ -1,0 +1,76 @@
+{
+  "homo_lr": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_lr_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_lr_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_lr_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_lr_train_dsl_split.json"
+    }
+  },
+  "hetero_lr": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_lr_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_lr_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_lr_train_conf_split_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_lr_train_dsl_split_no_scale.json"
+    }
+  },
+  "homo_secure_boost": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_secure_boost_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_secure_boost_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_secure_boost_train_conf_split_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_secure_boost_train_dsl_split_no_scale.json"
+    }
+  },
+  "hetero_secure_boost": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_secure_boost_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_secure_boost_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_secure_boost_train_conf_split_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_secure_boost_train_dsl_split_no_scale.json"
+    }
+  },
+  "homo_nn": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_dnn_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_dnn_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/homo_dnn_train_conf_split_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/homo_dnn_train_dsl_split_no_scale.json"
+    }
+  },
+  "hetero_nn": {
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_dnn_train_conf_split.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_dnn_train_dsl_split.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_dnn_train_conf_split_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_dnn_train_dsl_split_no_scale.json"
+    }
+    },
+   "hetero_line":{
+    "scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_line_train_job_conf.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_line_train_job_dsl.json"
+    },
+    "no_scale": {
+      "conf": "fate_flow/extension/conf/train_conf/hetero_line_train_job_conf_no_scale.json",
+      "dsl": "fate_flow/extension/conf/train_conf/hetero_line_train_job_dsl_no_scale.json"
+    }
+  },
+  "intersection": {
+      "conf": "fate_flow/extension/conf/train_conf/intersection_conf.json",
+      "dsl": "fate_flow/extension/conf/train_conf/intersection_dsl.json"
+    }
+}

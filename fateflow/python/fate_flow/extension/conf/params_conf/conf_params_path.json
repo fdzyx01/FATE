@@ -1,0 +1,23 @@
+{
+  "homo_lr": {
+    "conf_params": "fate_flow/extension/conf/params_conf/homo_lr_params.docx"
+  },
+  "hetero_lr": {
+    "conf_params": "fate_flow/extension/conf/params_conf/hetero_lr_params.docx"
+  },
+  "homo_secure_boost": {
+    "conf_params": "fate_flow/extension/conf/params_conf/homo_secure_boost_params.docx"
+  },
+  "hetero_secure_boost": {
+    "conf_params": "fate_flow/extension/conf/params_conf/hetero_secure_boost_params.docx"
+  },
+  "homo_nn": {
+    "conf_params": "fate_flow/extension/conf/params_conf/homo_dnn_params.docx"
+  },
+  "hetero_nn": {
+    "conf_params": "fate_flow/extension/conf/params_conf/hetero_dnn_params.docx"
+    },
+   "hetero_line":{
+    "conf_params": "fate_flow/extension/conf/params_conf/hetero_line_params.docx"
+  }
+}
