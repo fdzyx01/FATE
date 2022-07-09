@@ -27,7 +27,7 @@ if [ -z "$TAG" ]; then
         TAG="${version}-release"
 fi
 BASE_TAG=${TAG}
-source ${WORKING_DIR}/.env
+#source ${WORKING_DIR}/.env
 
 # print build INFO
 echo "[INFO] Build info"
