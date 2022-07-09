@@ -64,7 +64,7 @@ buildBase() {
 
 buildModule() {
         echo "START BUILDING IMAGE"
-        for module in "python" "fateboard" "eggroll" "python-nn"; do
+        for module in "python"; do
         cd ${WORKING_DIR}
                 echo "### START BUILDING ${module} ###"
                 docker build --build-arg PREFIX=${PREFIX} --build-arg BASE_TAG=${BASE_TAG} --no-cache -t ${PREFIX}/${module}:${TAG} -f ${WORKING_DIR}/docker/modules/${module}/Dockerfile ${WORKING_DIR}/catch/
@@ -72,6 +72,12 @@ buildModule() {
                 echo ""
         done
         echo "END BUILDING IMAGE"
+}
+
+buildPythonSparkModule() {
+    # python-spark
+    docker build --build-arg SOURCE_PREFIX=${PREFIX} --build-arg SOURCE_TAG=${TAG} -t ${PREFIX}/python-spark:${TAG} -f ${WORKING_DIR}/docker/modules/python-spark/Dockerfile
+    echo "Image: " ${PREFIX}/python-spark:${IMG_TAG}" Build Successful"
 }
 
 pushImage() {
@@ -94,6 +100,9 @@ while [ "$1" != "" ]; do
                 ;;
         modules)
                 buildModule
+                ;;
+        pythonSparkModules)
+                buildPythonSparkModule
                 ;;
         all)
                 package

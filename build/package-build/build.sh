@@ -22,7 +22,7 @@ source_dir=$(
     cd ../
     pwd
 )
-support_modules=(bin conf examples build deploy proxy fate fateflow fateboard eggroll)
+support_modules=(bin conf examples build deploy proxy fate fateflow)
 environment_modules=(python36 jdk pypi)
 packaging_modules=()
 echo ${source_dir}
