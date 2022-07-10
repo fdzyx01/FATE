@@ -47,7 +47,7 @@ def single():
     feature_id["service_id"] = request_data.get("service_id")
     sendToRemoteFeatureData = feature_id
     config_data = {"serviceId": request_data.get("service_id"), "sendToRemoteFeatureData": sendToRemoteFeatureData,
-                   "featureData": request_data.get("feature_data"), "model_version": "123", "host": "172.17.0.14", "port": 8000}
+                   "featureData": request_data.get("feature_data"), "model_version": "123"}
     session_token = get_session()
     headers = {"sessionToken": session_token}
     url = server_url + "/validate/inference"
@@ -66,8 +66,7 @@ def single():
 @manager.route('/batch', methods=['post'])
 def batch():
     request_data = request.form
-    config_data = {"serviceId": request_data.get("service_id"), "batchDataList": [], "host": "172.17.0.14",
-                   "port": 8000}
+    config_data = {"serviceId": request_data.get("service_id"), "batchDataList": []}
     service_id = request_data.get("service_id")
     data_file = request.files.get('file')
     birth_data = predict_utils.birth_data(data_file)

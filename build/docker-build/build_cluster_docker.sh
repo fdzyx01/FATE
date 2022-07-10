@@ -76,7 +76,7 @@ buildModule() {
 
 buildPythonSparkModule() {
     # python-spark
-    docker build --build-arg SOURCE_PREFIX=${PREFIX} --build-arg SOURCE_TAG=${TAG} -t ${PREFIX}/python-spark:${TAG} -f ${WORKING_DIR}/docker/modules/python-spark/Dockerfile
+    docker build --build-arg SOURCE_PREFIX=${PREFIX} --build-arg SOURCE_TAG=${TAG} -t ${PREFIX}/python-spark:${TAG} ${WORKING_DIR}/docker/modules/python-spark
     echo "Image: " ${PREFIX}/python-spark:${IMG_TAG}" Build Successful"
 }
 
